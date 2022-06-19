@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function Understanding() {
     const [getUnderstanding, setUnderstanding] = useState('');
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const fetchUnderstanding = (event) => {
         event.preventDefault();
@@ -12,6 +14,7 @@ function Understanding() {
             type: 'UNDERSTANDING_NUMBER',
             payload: getUnderstanding
         })
+        history.push('/Support');
     }
 
     return (

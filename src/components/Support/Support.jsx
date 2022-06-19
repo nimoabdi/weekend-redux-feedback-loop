@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function Support() {
     const [supports, setSupport] = useState('');
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const fetchSupport = (event) => {
         event.preventDefault();
@@ -12,6 +15,7 @@ function Support() {
             type: 'SUPPORT_NUMBER',
             payload: supports
         })
+        history.push('/Comments');
     }
 
     return (

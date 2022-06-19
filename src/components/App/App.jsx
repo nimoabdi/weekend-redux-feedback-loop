@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Comments from '../Comments/Comments';
@@ -7,6 +6,7 @@ import Feeling from '../Feeling/Feeling';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
 import Review from '../Review/Review';
+import SubmitThankYou from '../SubmitThankYou/SubmitThankYou';
 
 function App() {
 
@@ -25,16 +25,18 @@ function App() {
     <Route exact path='/Understanding'>
       <Understanding />
     </Route>
-    <Route exact path='Support'>
+    <Route exact path='/Support'>
       <Support />
     </Route>
-    <Route exact path='Comments'>
+    <Route exact path='/Comments'>
       <Comments />
     </Route>
-    <Route exact path='Review'>
+    <Route exact path='/Review'>
       <Review />
     </Route>
-    
+    <Route exact path='/SubmitThankYou'>
+      <SubmitThankYou />
+    </Route>
     
   </Router>  
   );

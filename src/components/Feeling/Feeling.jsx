@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
-
+import { useHistory } from 'react-router-dom';
+import { useState } from 'react';
 
 function Feeling () {
     const [feelings, setFeeling] = useState('');
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const getFeeling = (event) => {
         event.preventDefault();
@@ -13,6 +15,7 @@ function Feeling () {
             type: 'FEELING_NUMBER',
             payload: feelings
         })
+        history.push('/Understanding')
     }
 
     return (
