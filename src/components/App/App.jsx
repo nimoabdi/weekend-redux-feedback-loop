@@ -6,6 +6,7 @@ import Comments from '../Comments/Comments';
 import Feeling from '../Feeling/Feeling';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
+import Review from '../Review/Review';
 
 function App() {
 
@@ -17,22 +18,24 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
     </div>
-    <Route>
-      
-    </Route>
-    <Route>
-      <Comments />
-    </Route>
-    <Route>
+    <Route exact path='/' >
+      <p>Enter feedback</p>
       <Feeling />
     </Route>
-    <Route>
-      <Support />
-    </Route>
-    <Route>
+    <Route exact path='/Understanding'>
       <Understanding />
     </Route>
-
+    <Route exact path='Support'>
+      <Support />
+    </Route>
+    <Route exact path='Comments'>
+      <Comments />
+    </Route>
+    <Route exact path='Review'>
+      <Review />
+    </Route>
+    
+    
   </Router>  
   );
 }

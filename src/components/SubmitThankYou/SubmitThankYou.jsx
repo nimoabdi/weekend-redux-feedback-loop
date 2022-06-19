@@ -4,3 +4,4 @@ function SubmitThankYou() {
         </>
     )
 }
+export default SubmitThankYou;
