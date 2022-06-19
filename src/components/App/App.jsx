@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Comments from '../Comments/Comments';
+import Feeling from '../Feeling/Feeling';
+import Support from '../Support/Support';
 
 function App() {
 
@@ -16,6 +18,12 @@ function App() {
     </div>
     <Route>
       <Comments />
+    </Route>
+    <Route>
+      <Feeling />
+    </Route>
+    <Route>
+      <Support />
     </Route>
   </Router>  
   );

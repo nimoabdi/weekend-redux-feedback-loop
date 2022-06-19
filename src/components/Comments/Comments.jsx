@@ -17,10 +17,15 @@ function Comments () {
             <header>
                 <h1>Any comments you want to leave?</h1>
                 <p>Comments</p>
-
-
-
-
+                <form onSubmit={getComments}>
+                    <input 
+                        required
+                        placeholder='Comments'
+                        value={comments}
+                        onChange={(event)=> setComments(event.target.value)}>
+                        </input>
+                        <button type='submitBtn'>Next</button>
+                </form>
             </header>
         </section>
     ) 
