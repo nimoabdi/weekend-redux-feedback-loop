@@ -7,7 +7,7 @@ function Support() {
 
     const fetchSupport = (event) => {
         event.preventDefault();
-        console.log('this is the support rating', feelings)
+        console.log('this is the support rating', supports)
         dispatch({
             type: 'SUPPORT_NUMBER',
             payload: supports
@@ -24,14 +24,11 @@ function Support() {
                         required
                         placeholder='Support'
                         value={supports}
-                        onChange={(event)=> fetchSupport(event.target.value)}>
+                        onChange={(event)=> setSupport(event.target.value)}>
                         </input>
                         <button type='submitBtn'>Next</button>
                 </form>
             </header>
-
-
-
         </section>
     )
 }
